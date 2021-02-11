@@ -21,7 +21,12 @@ public class Element {
     public Element getNextElement() {
         return nextElement;
     }
+
     protected void setNextElement(Element nextElement){
         this.nextElement = nextElement;
+    }
+
+    protected void setContent (Object object){
+        this.content = object;
     }
 }
