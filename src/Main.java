@@ -5,7 +5,8 @@ public class Main {
         OnesidedLinkedList test = new OnesidedLinkedList();
         test.insertToEnd(1);
         test.insertToEnd(2);
+        test.insert(3, 1);
         System.out.println(test);
-        System.out.println(test.size());
+        System.out.println(test.getIndex(4));
     }
 }
