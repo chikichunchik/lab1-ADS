@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface LinkedList {
+public interface List {
     void insertToStart (Object insertObject);
     void insertToEnd (Object insertObject);
     void insert (Object insertObject, Integer position);

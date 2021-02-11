@@ -1,8 +1,8 @@
 package onesidedLinkedList;
 
-import interfaces.LinkedList;
+import interfaces.List;
 
-public class OnesidedLinkedList implements LinkedList {
+public class OnesidedLinkedList implements List {
 
     private Element firstElement;
 
