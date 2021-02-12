@@ -42,11 +42,11 @@ public class OnesidedLinkedList implements List {
         Element insertElement = this.firstElement;
         for (int i = 0; i < position - 1; i++){
             if(insertElement.getNextElement() == null){
-                throw new ArrayIndexOutOfBoundsException();
+                throw new IndexOutOfBoundsException();
             }
             insertElement = insertElement.getNextElement();
         }
-        if (insertElement == null) { throw new ArrayIndexOutOfBoundsException(); }
+        if (insertElement == null) { throw new IndexOutOfBoundsException(); }
         if (insertElement.getNextElement() == null){
             this.insertToEnd(insertObject);
             return;
@@ -57,7 +57,7 @@ public class OnesidedLinkedList implements List {
     @Override
     public void deleteFromStart() {
         if (this.firstElement == null){
-            throw new ArrayIndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException();
         }
         this.firstElement = firstElement.getNextElement();
     }
@@ -65,7 +65,7 @@ public class OnesidedLinkedList implements List {
     @Override
     public void deleteFromEnd() {
         if (this.firstElement == null){
-            throw new ArrayIndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException();
         } else if (this.firstElement.getNextElement() == null){
             this.deleteFromStart();
             return;
@@ -86,18 +86,18 @@ public class OnesidedLinkedList implements List {
         Element deleteElement = this.firstElement;
         for (int i = 0; i < position - 1; i++){
             if(deleteElement == null || deleteElement.getNextElement() == null){
-                throw new ArrayIndexOutOfBoundsException();
+                throw new IndexOutOfBoundsException();
             }
             deleteElement = deleteElement.getNextElement();
         }
-        if (deleteElement == null) { throw new ArrayIndexOutOfBoundsException(); }
+        if (deleteElement == null) { throw new IndexOutOfBoundsException(); }
         deleteElement.setNextElement(deleteElement.getNextElement().getNextElement());
     }
 
     @Override
     public void setStart(Object setObject) {
         if (this.firstElement == null) {
-            throw new ArrayIndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException();
         }
         this.firstElement.setContent(setObject);
     }
@@ -105,7 +105,7 @@ public class OnesidedLinkedList implements List {
     @Override
     public void setEnd(Object setObject) {
         if (this.firstElement == null) {
-            throw new ArrayIndexOutOfBoundsException();
+            throw new IndexOutOfBoundsException();
         }
         Element lastElement = this.firstElement;
         while (lastElement.getNextElement() != null){
@@ -120,11 +120,11 @@ public class OnesidedLinkedList implements List {
             this.setStart(setObject);
             return;
         }
-        if (this.firstElement == null) { throw new ArrayIndexOutOfBoundsException(); }
+        if (this.firstElement == null) { throw new IndexOutOfBoundsException(); }
         Element currentElement = this.firstElement;
         for (int i = 0; i < position; i++){
             currentElement = currentElement.getNextElement();
-            if (currentElement == null) { throw new ArrayIndexOutOfBoundsException(); }
+            if (currentElement == null) { throw new IndexOutOfBoundsException(); }
         }
         currentElement.setContent(setObject);
     }
