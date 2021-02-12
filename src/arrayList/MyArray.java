@@ -1,12 +1,12 @@
 package arrayList;
 
-
+import interfaces.List;
 import java.util.Iterator;
 
 public class MyArray<E> implements Iterable<E>, List {
 	private int size = 10;
 	private Object[] array = new Object[size];
-	private int loadfactor = 1/3;
+	private double loadfactor = 1/3;
 	private int current = 0;
 	
 	private class ArrIterator<E> implements Iterator<E>{
@@ -43,7 +43,7 @@ public class MyArray<E> implements Iterable<E>, List {
         	int element = (Integer) this.array[0];
         }
         catch(ClassCastException e) {
-        	throw new IllegalArgumentException("Масив не містить чисел");
+        	throw new IllegalArgumentException("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ");
         }
         int result = 0;
         for(int i=0;i<current;i++) {
@@ -63,14 +63,14 @@ public class MyArray<E> implements Iterable<E>, List {
 		array[this.current++]=element;
 		}
 		catch(ClassCastException e) {
-			throw new IllegalArgumentException("Не вірне значення");
+			throw new IllegalArgumentException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 	}
 	
 	@Override
 	public void insert(Object obj, Integer index) {
 		if(index>this.current) {
-			throw new IndexOutOfBoundsException("Ви вийшли за границі масиву");
+			throw new IndexOutOfBoundsException("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 		try {
 			E element = (E) obj;
@@ -95,14 +95,14 @@ public class MyArray<E> implements Iterable<E>, List {
 		this.current++;
 		}
 		catch (ClassCastException e) {
-			throw new IllegalArgumentException("Не вірне значення");
+			throw new IllegalArgumentException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 	}
 	
 	@Override
 	public void delete(Integer index){
 		if(index>=this.current) {
-			throw new IndexOutOfBoundsException("Ви вийшли за границі масиву");
+			throw new IndexOutOfBoundsException("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 		for(int i=index;i<this.current;i++) {
 			this.array[i]=this.array[i+1];
@@ -118,13 +118,13 @@ public class MyArray<E> implements Iterable<E>, List {
 		try {
 			E element= (E) elem;
 		if(index>=this.current) {
-			throw new IndexOutOfBoundsException("Ви вийшли за границі масиву");
+			throw new IndexOutOfBoundsException("пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 		if(index<this.current) {
 			this.array[index]=element;
 		}
 		} catch(ClassCastException e) {
-    	throw new IllegalArgumentException("Не вірне значення");
+    	throw new IllegalArgumentException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 	}
 	
@@ -141,9 +141,9 @@ public class MyArray<E> implements Iterable<E>, List {
 				return i;
 			}
 		}
-		throw new IllegalArgumentException("Заданий недійсний елемент");
+		throw new IllegalArgumentException("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		} catch(ClassCastException e) {
-    	throw new IllegalArgumentException("Не вірне значення");
+    	throw new IllegalArgumentException("пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
 		}
 	}
 	
