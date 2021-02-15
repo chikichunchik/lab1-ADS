@@ -108,7 +108,7 @@ public class MyArray<E> implements Iterable<E>, List {
 			this.array[i]=this.array[i+1];
 		}
 		this.current--;
-		if (this.current>10 && this.current<=this.loadfactor*this.size) {
+		if (this.current>3 && this.current<=this.loadfactor*this.size) {
 			changeSize(this.size/2);
 		}
 	}
