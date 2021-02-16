@@ -1,4 +1,7 @@
 import onesidedLinkedList.OnesidedLinkedList;
+import twoWayLinkedList.twoWayLinkedList;
+
+import interfaces.List;
 
 public class Main {
     static public void main(String[] args){
@@ -7,6 +10,8 @@ public class Main {
         test.insertToEnd(2);
         test.insert(3, 1);
         System.out.println(test);
-        System.out.println(test.getIndex(4));
+   //     System.out.println(test.getIndex(4));
+
+        List myTwoWayLL = new twoWayLinkedList();
     }
 }
