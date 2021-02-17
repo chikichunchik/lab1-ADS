@@ -153,6 +153,8 @@ public class OnesidedLinkedList implements List {
         return result;
     }
 
+
+    @Override
     public int sumInt(){
         if (this.firstElement == null){
             return 0;
