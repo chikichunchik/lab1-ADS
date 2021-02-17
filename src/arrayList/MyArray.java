@@ -1,4 +1,4 @@
-package arrayList;
+﻿package arrayList;
 
 import interfaces.List;
 import java.util.Iterator;
@@ -184,7 +184,7 @@ public class MyArray<E> implements Iterable<E>, List {
 
 	@Override
 	public void deleteFromEnd() {
-		this.delete(current);
+		this.delete(this.current-1);
 		
 	}
 
