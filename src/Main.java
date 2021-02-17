@@ -1,8 +1,5 @@
-import onesidedLinkedList.OnesidedLinkedList;
-import twoWayLinkedList.twoWayLinkedList;
 import arrayList.MyArray;
-
-import interfaces.List;
+import doublyLinkedList.DoublyLinkedList;
 
 public class Main {
     static public void main(String[] args){
@@ -71,5 +68,14 @@ public class Main {
                 (System.currentTimeMillis() - startTime) + " ms");
 
         System.out.println(test);
+
+        DoublyLinkedList dll = new DoublyLinkedList();
+        dll.insertToStart(1);
+        dll.insertToStart(2);
+        dll.insertToEnd(3);
+        dll.insertToEnd(4);
+        dll.insert(5, 3);
+        int i = 1;
+
     }
 }
