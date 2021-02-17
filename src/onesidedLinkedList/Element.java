@@ -1,6 +1,6 @@
 package onesidedLinkedList;
 
-public class Element {
+class Element {
     private Object content;
     private Element nextElement;
 
