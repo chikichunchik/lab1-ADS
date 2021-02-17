@@ -43,7 +43,7 @@ public class MyArray<E> implements Iterable<E>, List {
         	int element = (Integer) this.array[0];
         }
         catch(ClassCastException e) {
-        	throw new IllegalArgumentException("����� �� ������ �����");
+        	throw new IllegalArgumentException("Array not consist with integer");
         }
         int result = 0;
         for(int i=0;i<current;i++) {
@@ -63,14 +63,14 @@ public class MyArray<E> implements Iterable<E>, List {
 		array[this.current++]=element;
 		}
 		catch(ClassCastException e) {
-			throw new IllegalArgumentException("�� ���� ��������");
+			throw new IllegalArgumentException("Invalid type of element");
 		}
 	}
 	
 	@Override
 	public void insert(Object obj, Integer index) {
 		if(index>this.current) {
-			throw new IndexOutOfBoundsException("�� ������ �� ������� ������");
+			throw new IndexOutOfBoundsException("Index out of bounds");
 		}
 		try {
 			E element = (E) obj;
@@ -95,14 +95,14 @@ public class MyArray<E> implements Iterable<E>, List {
 		this.current++;
 		}
 		catch (ClassCastException e) {
-			throw new IllegalArgumentException("�� ���� ��������");
+			throw new IllegalArgumentException("Invalid type of element");
 		}
 	}
 	
 	@Override
 	public void delete(Integer index){
 		if(index>=this.current) {
-			throw new IndexOutOfBoundsException("�� ������ �� ������� ������");
+			throw new IndexOutOfBoundsException("Index out of bounds");
 		}
 		for(int i=index;i<this.current;i++) {
 			this.array[i]=this.array[i+1];
@@ -118,13 +118,13 @@ public class MyArray<E> implements Iterable<E>, List {
 		try {
 			E element= (E) elem;
 		if(index>=this.current) {
-			throw new IndexOutOfBoundsException("�� ������ �� ������� ������");
+			throw new IndexOutOfBoundsException("Index out of bounds");
 		}
 		if(index<this.current) {
 			this.array[index]=element;
 		}
 		} catch(ClassCastException e) {
-    	throw new IllegalArgumentException("�� ���� ��������");
+    	throw new IllegalArgumentException("Invalid type of element");
 		}
 	}
 	
@@ -141,9 +141,9 @@ public class MyArray<E> implements Iterable<E>, List {
 				return i;
 			}
 		}
-		throw new IllegalArgumentException("������� �������� �������");
+		throw new IllegalArgumentException("Element not exist");
 		} catch(ClassCastException e) {
-    	throw new IllegalArgumentException("�� ���� ��������");
+    	throw new IllegalArgumentException("Invalid type of element",e);
 		}
 	}
 	
