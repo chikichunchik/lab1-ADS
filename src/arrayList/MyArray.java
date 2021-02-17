@@ -160,6 +160,9 @@ public class MyArray<E> implements Iterable<E>, List {
 			E element =(E) this.array[i];
 			buffer.append(element.toString());
 			buffer.append(", ");
+			if(i!=0 && i%100==0) {
+				buffer.append("\n");
+			}
 		}
 		buffer.delete(buffer.length()-2, buffer.length());
 		buffer.append("]");
