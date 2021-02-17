@@ -1,11 +1,12 @@
 import onesidedLinkedList.OnesidedLinkedList;
 import twoWayLinkedList.twoWayLinkedList;
+import arrayList.MyArray;
 
 import interfaces.List;
 
 public class Main {
     static public void main(String[] args){
-        OnesidedLinkedList test = new OnesidedLinkedList();
+        MyArray<Integer> test = new MyArray<>();
         long startTime;
 
         // Time to add 10^5 elements to end
@@ -56,7 +57,7 @@ public class Main {
         test.sumInt();
         System.out.println("Time to count sum of list with 10^5 elements: " +
                 (System.currentTimeMillis() - startTime) + " ms");
-        
+
         // Time to find index of the first element in list with 10^5 elements
         startTime = System.currentTimeMillis();
         test.getIndex(3);
