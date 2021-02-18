@@ -1,13 +1,23 @@
 import arrayList.MyArray;
 import doublyLinkedList.DoublyLinkedList;
-import doublyLinkedList.Element;
 import interfaces.List;
+import onesidedLinkedList.OnesidedLinkedList;
 
 public class Main {
     static public void main(String[] args){
-        MyArray<Integer> test = new MyArray<>();
-        long startTime;
+        MyArray<Integer> testArray = new MyArray<>();
+        tst(testArray, "Test MyArray");
 
+        OnesidedLinkedList testOnesidedLL = new OnesidedLinkedList();
+        tst(testOnesidedLL, "Test OnesidedLinkedList");
+
+        DoublyLinkedList testDLL = new DoublyLinkedList();
+        tst(testDLL, "Test DoublyLinkedList");
+    }
+
+    static void tst(List test, String msg){
+        System.out.println("---------------- " + msg + " --------------------");
+        long startTime;
         // Time to add 10^5 elements to end
         startTime = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++){
@@ -68,33 +78,6 @@ public class Main {
         test.getIndex(2);
         System.out.println("Time to find index of the last element in list with 10^5 elements: " +
                 (System.currentTimeMillis() - startTime) + " ms");
-
-        System.out.println(test);
-
-//        List dll = new DoublyLinkedList();
-//        for (int i = 0; i<1000; i++)
-//        {
-//            dll.insertToStart(i);
-//        }
-
-        DoublyLinkedList dll = new DoublyLinkedList();
-        dll.insertToStart(1);
-        dll.insertToStart(2);
-        dll.insertToEnd(3);
-        //dll.insertToEnd("Hi!");
-        dll.insertToEnd(4);
-        //dll.insertToEnd("Java");
-        dll.insert(5, 3);
-        //dll.insertToEnd(6);
-        //dll.insertToEnd(7);
-        //dll.deleteFromStart();
-        //dll.deleteFromEnd();
-        //dll.delete(4);
-        //dll.setStart(7);
-        //dll.setEnd(8);
-        //dll.set(6, 2);
-        //System.out.println(dll.sumInt());
-        //int i = 1;
 
     }
 }

@@ -114,8 +114,7 @@ public class DoublyLinkedList implements List {
         if(first == null){
             throw new NullPointerException("There are no elements");
         } else {
-            Element newElement = new Element(content, null, first.next);
-            first = newElement;
+            first.content = content;
         }
     }
 
@@ -124,8 +123,7 @@ public class DoublyLinkedList implements List {
         if(last == null){
             throw new NullPointerException("There are no elements");
         } else {
-            Element newElement = new Element(content, last.prev, null);
-            last = newElement;
+            last.content = content;
         }
     }
 
@@ -162,6 +160,16 @@ public class DoublyLinkedList implements List {
         else{
             int i = 0;
             Element current = first;
+//            for (int j = 0; j<size; j++){
+//                if (current.content != null)
+//                {
+//                    if (current.content == content){
+//                        return j;
+//                    }
+//                    current = current.next;
+//                }
+//            }
+
             while (current.content != content){
                 i++;
                 current = current.next;
