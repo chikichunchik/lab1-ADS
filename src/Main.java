@@ -1,5 +1,7 @@
 import arrayList.MyArray;
 import doublyLinkedList.DoublyLinkedList;
+import doublyLinkedList.Element;
+import interfaces.List;
 
 public class Main {
     static public void main(String[] args){
@@ -69,13 +71,30 @@ public class Main {
 
         System.out.println(test);
 
+//        List dll = new DoublyLinkedList();
+//        for (int i = 0; i<1000; i++)
+//        {
+//            dll.insertToStart(i);
+//        }
+
         DoublyLinkedList dll = new DoublyLinkedList();
         dll.insertToStart(1);
         dll.insertToStart(2);
         dll.insertToEnd(3);
+        //dll.insertToEnd("Hi!");
         dll.insertToEnd(4);
+        //dll.insertToEnd("Java");
         dll.insert(5, 3);
-        int i = 1;
+        //dll.insertToEnd(6);
+        //dll.insertToEnd(7);
+        //dll.deleteFromStart();
+        //dll.deleteFromEnd();
+        //dll.delete(4);
+        //dll.setStart(7);
+        //dll.setEnd(8);
+        //dll.set(6, 2);
+        //System.out.println(dll.sumInt());
+        //int i = 1;
 
     }
 }
